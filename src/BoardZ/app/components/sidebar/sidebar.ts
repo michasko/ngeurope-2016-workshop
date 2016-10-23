@@ -13,7 +13,7 @@ export class SidebarComponent {
 
     constructor() {
         this.navigationEntries = [];
-        this.navigationEntries.push(new NavigationEntry([''], 'dashboard', 'Dashboard'));
+
         this.navigationEntries.push(new NavigationEntry(['/games/all'], 'list', 'Games'));
         this.navigationEntries.push(new NavigationEntry(['/radiussearch'], 'location-arrow', 'Players search'));
 

@@ -31,7 +31,7 @@ export class LoginComponent {
                 () => {
                     this._signalRService.start();
                     this.setError(false);
-                    this._router.navigate(['']);
+                    this._router.navigate(['/games/all']);
                 },
                 () => {
                     this.setError(true);

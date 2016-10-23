@@ -1,6 +1,5 @@
 import {ModuleWithProviders} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DashboardComponent} from '../components/dashboard/dashboard';
 import {LoginComponent} from '../components/login/login';
 import {NotificationsComponent} from '../components/notifications/notifications';
 import {RadiusSearchComponent} from '../components/radiusSearch/radiusSearch';
@@ -11,8 +10,7 @@ import {GamesRootComponent} from '../components/games/gamesRoot';
 import {AuthenticationGuard} from '../guards/authenticationGuard';
 
 const appRootRoutes: Routes = [
-
-    { path: '',  canActivate: [AuthenticationGuard], component: DashboardComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/games/all'},
     { path: 'login',  component: LoginComponent },
     { path: 'notifications', canActivate: [AuthenticationGuard], component: NotificationsComponent },
     { path: 'radiussearch',  canActivate: [AuthenticationGuard], component: RadiusSearchComponent }
