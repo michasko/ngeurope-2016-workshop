@@ -102,11 +102,11 @@ export namespace ModuleConfiguration {
 
         public static providers = [
             {
-                provide: CameraService, useFactory: (() => {
-                return (platformInformationService: PlatformInformationService): CameraService => {
+                provide: CameraService,
+                useFactory: (platformInformationService: PlatformInformationService): CameraService => {
                     return platformInformationService.isMobile ? new MobileCameraService() : new DesktopCameraService();
-                };
-            })(), deps: [PlatformInformationService]
+                },
+                deps: [PlatformInformationService]
             },
             GeolocationService
         ];
